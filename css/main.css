@@ -159,8 +159,17 @@ body{
     -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
 }
 
-.footer{
-    /*background-color: #fff;*/
-    padding-bottom: 30px;
-
+#beforefooter {
+    margin: -30px;
 }
+.footer{
+    background-color: #000;
+    padding-top: 30px;
+    margin-top: 30px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+}
+
