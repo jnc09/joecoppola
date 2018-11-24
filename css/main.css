@@ -2,6 +2,11 @@
     font-family: 'Roboto';
 }
 
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
 body{
     overflow-x: hidden;
 }
@@ -159,17 +164,15 @@ body{
     -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
 }
 
-#beforefooter {
-    margin: -30px;
+#before-footer {
+    padding-bottom: 3rem;
 }
 .footer{
-    background-color: #000;
-    padding-top: 30px;
-    margin-top: 30px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    display: block;
+    padding-bottom: 3rem;
     width: 100%;
+}
+
+.foot-center {
+    text-align: center;
 }
 
