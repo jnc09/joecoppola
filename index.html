@@ -135,67 +135,96 @@
     <!-- Project Section -->
     <div class="container">
         <div class="row">
-            <div class="titles col-12 text-center mb-3 mt-3">
+            <div class="titles col-12 text-center">
                 <h3>Projects</h3>
             </div>
-            <div class="col-12 col-md-6 col-lg-6 card text-white card-projects">
+            <div class="col-12 card text-white card-projects">
                 <img class="card-img" src="img/two-monitor.jpg/#55595c:#373a3c/text:Card image" alt="Card image">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text">Last updated 3 mins ago</p>
-                </div>
+                <a href="#" data-toggle="modal" data-target="#exampleModalLong">
+                    <div class="card-img-overlay project-overlay">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">Last updated 3 mins ago</p>
+                    </div>
+                </a>
             </div>
-            <div class="col-12 col-md-6 col-lg-6 card text-white card-projects">
+            <div class="col-12 card text-white card-projects">
                 <img class="card-img" src="img/two-monitor.jpg/#55595c:#373a3c/text:Card image" alt="Card image">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text">Last updated 3 mins ago</p>
-                </div>
+                <a href="#" data-toggle="modal" data-target="#exampleModalLong">
+                    <div class="card-img-overlay project-overlay">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">Last updated 3 mins ago</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
     <!--/Project Section -->
 
 
-    <!-- Contact -->
+    <!-- Connect -->
     <div class="container pt-1" id="before-footer">
         <div class="titles center-block text-center mb-3 mt-3">
-            <h3>contact</h3>
+            <h3>connect</h3>
         </div>
         <div class="row">
-            <div class="col-6 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="card" style="width: 10rem;">
                     <a class="mx-auto" href="https://github.com/jnc09" target="_blank" ><img class="card-img-top icons mx-auto" src="img/iconmonstr-github-1-240.png/?text=Image cap" alt="Card image cap"></a>
                 </div>
             </div>
-            <div class="col-6 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="card" style="width: 10rem;">
                     <a class="mx-auto" href="https://www.linkedin.com/in/josephcoppola1/" target="_blank" ><img class="card-img-top icons mx-auto" src="img/iconmonstr-linkedin-3-240.png" alt="Card image cap"></a>
                 </div>
             </div>
-            <div class="col-6 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="card" style="width: 10rem;">
                     <a class="mx-auto" href="https://www.linkedin.com/in/josephcoppola1/" target="_blank" ><img class="card-img-top icons mx-auto " src="img/iconmonstr-instagram-6-240.png/?text=Image cap" alt="Card image cap"></a>
                 </div>
             </div>
-            <div class="col-6 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="card" style="width: 10rem;">
                     <a class="mx-auto" href="https://twitter.com/Coppolahola" target="_blank" ><img class="card-img-top icons mx-auto " src="img/iconmonstr-twitter-4-240.png/?text=Image cap" alt="Card image cap"></a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /Contact -->
+    <!-- /Connect -->
 
-    <footer class="footer col-lg-12">
-
-        <p class="text-center foot-center"> Joseph Coppola &copy; 2018</p>
-
+    <footer class="footer col-lg-12 text-center pt-6">
+        <div class="row h-50">
+            <div class="col-sm-12 h-100 d-table">
+                <div class="card card-block d-table-cell align-middle">
+                    Joseph Coppola &copy; 2018
+                </div>
+            </div>
+        </div>
     </footer>
-
-
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Bootstrap core Javascript
@@ -224,7 +253,23 @@
                 $('nav').toggleClass('shrink', $(this).scrollTop() > 660);
                 $('.navbar').removeClass('shadow', $(this).scrollTop() > 525);
             });
+            $('.card-projects').hover(
+                function () {
+                    $(this).animate({
+                        marginTop: "-=1%",
+                    }, 200);
+                },
 
+                function () {
+                    $(this).animate({
+                        marginTop: "0%"
+                    }, 200);
+                }
+            )
+            // <!-- Mouse-Over Projects -->
+            // $('.card-projects').mouseover(function(m){
+            //     $('.card-img-overlay').toggleClass('project-overlay');
+            // })
             <!-- Smooth Scrolling -->
             let scrollLink = $('.scroll');
 
@@ -254,7 +299,7 @@
             var a = function() {
                 100 < e("#mainNav").offset().top ? e("#mainNav").addClass("navbar-shrink") : e("#mainNav").removeClass("navbar-shrink")
             };
-        })
+        });
 
     </script>
 

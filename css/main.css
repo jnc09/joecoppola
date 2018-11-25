@@ -1,12 +1,6 @@
 *{
     font-family: 'Roboto';
 }
-
-html,
-body {
-    margin: 0;
-    height: 100%;
-}
 body{
     overflow-x: hidden;
 }
@@ -24,9 +18,9 @@ body{
 }
 
 #mainNav.navbar.shadow{
-    -webkit-box-shadow: 0px 3px 13px 0px rgba(0,0,0,0.52);
-    -moz-box-shadow: 0px 3px 13px 0px rgba(0,0,0,0.52);
-    box-shadow: 0px 3px 13px 0px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.52);
+    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.52);
 }
 #mainNav .navbar-brand {
     padding: .5rem 0;
@@ -122,6 +116,11 @@ body{
     text-transform: uppercase;
     color: #061e34;
 }
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
 .pt-1{
     margin-top: 100px;
 }
@@ -148,11 +147,24 @@ body{
     width: 70%;
     height: auto;
 }
-.card-img-overlay{
-    margin :10px;
+
+.project-overlay {
+    opacity: 0;
+    border-radius: 13px;
+    color: #061e34;
+    background: white;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+
+.project-overlay:hover {
+
+    opacity: .7;
 }
 .card-projects{
     padding: 0;
+    margin-top: .75rem;
+    marging-bottom: .75rem;
     border-radius: 15px;
     background: transparent !important;
     /*background-color: rgba(245, 245, 245, 1);*/
@@ -167,12 +179,9 @@ body{
 #before-footer {
     padding-bottom: 3rem;
 }
-.footer{
-    padding-bottom: 3rem;
-    width: 100%;
-}
 
-.foot-center {
-    text-align: center;
+.pt-6 {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
