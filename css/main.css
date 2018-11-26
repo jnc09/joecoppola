@@ -132,6 +132,7 @@ body{
 }
 .card-img{
     width: 100%;
+    max-width: 50rem;
     height: 40vh;
     border-radius: 15px;
 }
@@ -152,6 +153,7 @@ body{
     font-size: 2rem;
 }
 .project-overlay {
+
     opacity: 0;
     border-radius: 13px;
     color: #fff;
@@ -161,9 +163,11 @@ body{
 }
 .project-overlay:hover {
 
-    opacity: .1;
+    opacity: .9;
 }
 .card-projects{
+    border-right: 1rem white solid;
+    max-width: 40rem;
     padding: 0;
     margin-top: .75rem;
     marging-bottom: .75rem;
@@ -177,7 +181,8 @@ body{
     box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
 }
-#before-footer {
+
+#connect {
     padding-bottom: 3rem;
 }
 

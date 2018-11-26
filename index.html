@@ -28,7 +28,7 @@
     <link href="css/main.css" rel="stylesheet"/>
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-<body>
+<body data-spy='scroll' data-target='.navbar' data-offset='50'>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-light fixed-top shadow" id="mainNav">
@@ -40,17 +40,17 @@
 
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav ml-auto">
-                <li class="home nav-item">
-                    <a class=" nav-link scroll" href="#">home <span class="sr-only">(current)</span></a>
+                <li class="home nav-item bottom">
+                    <a class=" nav-link scroll" href="#landing">home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="about nav-item">
-                    <a class="nav-link scroll active" href="#about">about</a>
+                <li class="about nav-item top">
+                    <a class="nav-link scroll" href="#about">about</a>
                 </li>
-                <li class="projects nav-item">
-                    <a class="nav-link scroll" href="#">projects</a>
+                <li class="projects nav-item bottom">
+                    <a class="nav-link scroll" href="#projects">projects</a>
                 </li>
-                <li class="about nav-item">
-                    <a class="nav-link scroll" href="#">connect</a>
+                <li class="about nav-item top">
+                    <a class="nav-link scroll" href="#connect">connect</a>
                 </li>
 
             </ul>
@@ -69,19 +69,19 @@
     <div class="caption center-block text-center">
         <h3>Hello, I'm <span class="purple">Joe Coppola</span>.</h3>
         <h3>I'm a full-stack software developer.</h3>
-        <a class="btn btn-outline-light" href="about">Take a Look</a>
+        <a class="btn btn-outline-light" href="#about">Take a Look</a>
     </div>
     <!-- End Landing Page -->
 
     <!-- About -->
-    <div class="container pt-1">
+    <div class="container pt-1" id="about">
         <div class="titles center-block text-center mb-3 mt-3">
             <h3>ABOUT</h3>
         </div>
         <div class="row">
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card strengths" style="width: 18rem;">
-                    <img class="card-img-top icons mx-auto" src="img/iconmonstr-book-20-240.png/?text=Image cap" alt="Card image cap">
+                    <img class="card-img-top icons mx-auto" src="img/iconmonstr-book-20-240.png" alt="Card image cap">
                     <div class="card-body">
                         <h2 class="text-center">Input</h2>
                         <p class="card-text">Taking in information about a problem to get a better understanding is what I bring to a team.</p>
@@ -90,7 +90,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card strengths" style="width: 18rem;">
-                    <img class="card-img-top icons mx-auto" src="img/iconmonstr-glasses-1-240.png/?text=Image cap" alt="Card image cap">
+                    <img class="card-img-top icons mx-auto" src="img/iconmonstr-glasses-1-240.png" alt="Card image cap">
                     <div class="card-body">
                         <h2 class="text-center">Analytical</h2>
                         <p class="card-text">With the information I have, I am able to analyze it and break it down into patterns and components.</p>
@@ -99,7 +99,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card strengths" style="width: 18rem;">
-                    <img class="card-img-top icons mx-auto " src="img/iconmonstr-idea-14-240.png/?text=Image cap" alt="Card image cap">
+                    <img class="card-img-top icons mx-auto " src="img/iconmonstr-idea-14-240.png" alt="Card image cap">
                     <div class="card-body">
                         <h2 class="text-center">Restoration</h2>
                         <p class="card-text">Allowes me to come up with a decise, and actionable plan to solve the problem.</p>
@@ -108,7 +108,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card strengths" style="width: 18rem;">
-                    <img class="card-img-top icons mx-auto " src="img/iconmonstr-user-29-240.png/?text=Image cap" alt="Card image cap">
+                    <img class="card-img-top icons mx-auto " src="img/iconmonstr-user-29-240.png" alt="Card image cap">
                     <div class="card-body">
                         <h2 class="text-center">Relator</h2>
                         <p class="card-text">Teamwork is important, and so is being able to know how to communicate with your team.</p>
@@ -133,22 +133,22 @@
     </div>
 
     <!-- Project Section -->
-    <div class="container">
+    <div class="container" id="projects">
         <div class="row">
             <div class="titles col-12 text-center">
                 <h3>Projects</h3>
             </div>
-            <div class="col-12 card text-white card-projects">
-                <img class="card-img" src="img/two-monitor.jpg/#55595c:#373a3c/text:Card image" alt="Card image">
-                <a href="#" data-toggle="modal" data-target="#exampleModalLong">
+            <div class="col-12 col-lg-6 card text-white card-projects proj1">
+                <img class="card-img" src="img/national-park-geek-webapp.png" alt="Card image">
+                <a href="#">
                     <div class="card-img-overlay project-overlay">
                         <h5 class="card-title text-center">National Park Web-app</h5>
                     </div>
                 </a>
             </div>
-            <div class="col-12 card text-white card-projects">
-                <img class="card-img" src="img/two-monitor.jpg/#55595c:#373a3c/text:Card image" alt="Card image">
-                <a href="#" data-toggle="modal" data-target="#exampleModalLong">
+            <div class="col-12 col-lg-6 card text-white card-projects proj2">
+                <img class="card-img" src="img/two-monitor.jpg" alt="Card image">
+                <a href="#">
                     <div class="card-img-overlay project-overlay">
                         <h5 class="card-title text-center">National Park Reservation CLI</h5>
                     </div>
@@ -160,29 +160,35 @@
 
 
     <!-- Connect -->
-    <div class="container pt-1" id="before-footer">
+    <div class="container pt-1" id="connect">
         <div class="titles center-block text-center mb-3 mt-3">
             <h3>connect</h3>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 connect-icon">
                 <div class="card" style="width: 10rem;">
-                    <a class="mx-auto" href="https://github.com/jnc09" target="_blank" ><img class="card-img-top icons mx-auto" src="img/iconmonstr-github-1-240.png/?text=Image cap" alt="Card image cap"></a>
+                    <a class="mx-auto" href="https://github.com/jnc09" target="_blank"><img
+                            class="card-img-top icons mx-auto" src="img/iconmonstr-github-1-240.png"
+                            alt="Card image cap"></a>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 connect-icon">
                 <div class="card" style="width: 10rem;">
                     <a class="mx-auto" href="https://www.linkedin.com/in/josephcoppola1/" target="_blank" ><img class="card-img-top icons mx-auto" src="img/iconmonstr-linkedin-3-240.png" alt="Card image cap"></a>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 connect-icon">
                 <div class="card" style="width: 10rem;">
-                    <a class="mx-auto" href="https://www.linkedin.com/in/josephcoppola1/" target="_blank" ><img class="card-img-top icons mx-auto " src="img/iconmonstr-instagram-6-240.png/?text=Image cap" alt="Card image cap"></a>
+                    <a class="mx-auto" href="https://www.linkedin.com/in/josephcoppola1/" target="_blank"><img
+                            class="card-img-top icons mx-auto" src="img/iconmonstr-instagram-6-240.png"
+                            alt="Card image cap"></a>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3 connect-icon">
                 <div class="card" style="width: 10rem;">
-                    <a class="mx-auto" href="https://twitter.com/Coppolahola" target="_blank" ><img class="card-img-top icons mx-auto " src="img/iconmonstr-twitter-4-240.png/?text=Image cap" alt="Card image cap"></a>
+                    <a class="mx-auto" href="https://twitter.com/Coppolahola" target="_blank"><img
+                            class="card-img-top icons mx-auto" src="img/iconmonstr-twitter-4-240.png"
+                            alt="Card image cap"></a>
                 </div>
             </div>
         </div>
@@ -251,22 +257,7 @@
                     scrollTop: $(this.hash).offset().top
                 }, 750)
             });
-
-            <!-- Active Link Switching -->
-            $(window).scroll(function() {
-                let scrollbarLocation = $(this).scrollTop();
-
-                scrollLink.each(function() {
-
-                    let sectionOffset = $(this.hash).offset().top - 20;
-
-                    if ( sectionOffset <= scrollbarLocation ) {
-                        $(this).addClass('active');
-                        $(this).siblings().removeClass('active');
-                    }
-                })
-            });
-            var a = function() {
+            let a = function () {
                 100 < e("#mainNav").offset().top ? e("#mainNav").addClass("navbar-shrink") : e("#mainNav").removeClass("navbar-shrink")
             };
         });
@@ -276,25 +267,13 @@
     <script>
         window.sr = ScrollReveal();
 
-
-        sr.reveal('#carouselExampleFade', {
-            duration: 2500,
-            distance: '0'
-        });
-
-        sr.reveal('.home', {
+        sr.reveal('.bottom', {
             duration: 2000,
             origin: 'bottom',
             distance: '300px'
         });
 
-        sr.reveal('.projects', {
-            duration: 2000,
-            origin: 'bottom',
-            distance: '300px'
-        });
-
-        sr.reveal('.about', {
+        sr.reveal('.top', {
             duration: 2000,
             origin: 'top',
             distance: '300px'
@@ -313,9 +292,18 @@
             duration: 3000,
             distance: '0'
         });
+        sr.reveal('.connect-icon', {
+            duration: 1500,
+            distance: 0
+        })
+        sr.reveal('.proj1', {
+            duration: 1500,
+            origin: 'right',
+            distance: '800px'
+        });
 
-        sr.reveal('.jumbotron .container', {
-            duration: 2000,
+        sr.reveal('.proj2', {
+            duration: 1500,
             origin: 'left',
             distance: '800px'
         });
