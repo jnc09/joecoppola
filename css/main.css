@@ -114,7 +114,7 @@ body{
     font-size: 2.4rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #061e34;
+    color: #0e3d67;
 }
 
 .container {
@@ -148,18 +148,20 @@ body{
     height: auto;
 }
 
+.card-title {
+    font-size: 2rem;
+}
 .project-overlay {
     opacity: 0;
     border-radius: 13px;
-    color: #061e34;
-    background: white;
+    color: #fff;
+    background: #2f86ce;
     -webkit-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
 }
-
 .project-overlay:hover {
 
-    opacity: .7;
+    opacity: .1;
 }
 .card-projects{
     padding: 0;
@@ -175,7 +177,6 @@ body{
     box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
 }
-
 #before-footer {
     padding-bottom: 3rem;
 }
